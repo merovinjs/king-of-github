@@ -14,11 +14,11 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
             Learn <CaretDownIcon className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="NavigationMenuContent">
+          <NavigationMenu.Content className="NavigationMenuContent Navfirst">
             <ul className="List one">
               <li style={{ gridRow: "span 3" }}>
                 <NavigationMenu.Link asChild>
-                  <a className="Callout" href="/">
+                  <a className="Callout" href="/callout">
                     <svg aria-hidden width="38" height="38" viewBox="0 0 25 25" fill="white">
                       <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
                       <path d="M12 0H4V8H12V0Z"></path>
@@ -47,7 +47,7 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
             Overview <CaretDownIcon className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="NavigationMenuContent">
+          <NavigationMenu.Content className="NavigationMenuContent NavSecond">
             <ul className="List two">
               <ListItem title="Introduction" href="/">
                 Build high-quality, accessible design systems and web apps.
@@ -81,10 +81,6 @@ const NavigationMenuDemo = () => {
           <div className="Arrow" />
         </NavigationMenu.Indicator>
       </NavigationMenu.List>
-
-      <div className="ViewportPosition">
-        <NavigationMenu.Viewport className="NavigationMenuViewport" />
-      </div>
     </NavigationMenu.Root>
   );
 };

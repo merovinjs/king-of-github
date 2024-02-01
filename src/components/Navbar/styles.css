@@ -14,15 +14,13 @@ p {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100vw;
-  background-color: blue;
   z-index: 1;
 }
 
 .NavigationMenuList {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 45px;
   background-color: white;
   padding: 4px;
@@ -42,6 +40,7 @@ p {
   line-height: 1;
   border-radius: 4px;
   font-size: 15px;
+  background-color: aqua;
   color: var(--violet-11);
 }
 .NavigationMenuTrigger:focus,
@@ -57,7 +56,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2px;
+  gap: 4px;
 }
 
 .NavigationMenuLink {
@@ -67,11 +66,17 @@ p {
   line-height: 1;
 }
 
+.Navfirst {
+  left: 0;
+}
+.NavSecond {
+  left: 32%;
+}
 .NavigationMenuContent {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50px;
   width: 100%;
+
   animation-duration: 250ms;
   animation-timing-function: ease;
 }
@@ -113,7 +118,7 @@ p {
 .NavigationMenuViewport {
   position: relative;
   transform-origin: top center;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 100%;
   background-color: white;
   border-radius: 6px;
@@ -143,10 +148,12 @@ p {
 }
 @media only screen and (min-width: 600px) {
   .List.one {
+    background-color: lightblue;
     width: 500px;
     grid-template-columns: 0.75fr 1fr;
   }
   .List.two {
+    background-color: lightcoral;
     width: 600px;
     grid-auto-flow: column;
     grid-template-rows: repeat(3, 1fr);
@@ -216,9 +223,12 @@ p {
 }
 
 .ViewportPosition {
-  position: absolute;
   display: flex;
+  align-items: center;
+  position: absolute;
   justify-content: center;
+  width: 100%;
+  background-color: rgb(197, 199, 170);
   width: 100%;
   top: 100%;
   left: 0;
@@ -237,9 +247,9 @@ p {
 
 .Arrow {
   position: relative;
-  top: 70%;
-  background-color: white;
-  width: 10px;
+  top: 10%;
+  background-color: rgb(136, 255, 0);
+  width: 50px;
   height: 10px;
   transform: rotate(45deg);
   border-top-left-radius: 2px;
