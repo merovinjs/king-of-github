@@ -2,6 +2,7 @@ import BestStars from "@/components/Beststars/BestStars";
 import styles from "./page.module.css";
 import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
+import Image from "next/image";
 
 const croissant = Croissant_One({
   subsets: ["latin-ext"],
@@ -23,12 +24,22 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <h1 className={croissant.className}>King&apos;s of Github</h1>
+      <div className={styles.headerContainer}>
+        <div className={styles.image}>
+          <Image src={"/homePageBg.jpg"} alt="homePageBg" sizes="(max-width:1200px) 100vw,700px" fill />
+        </div>
+
+        <h1 className={`${croissant.className} ${styles.h1}`}>King&apos;s of Github</h1>
+      </div>
       <div className={styles.bestStarsContainer}>
-        <BestStars first15={first15} />
-        <BestStars first15={first15} />
-        <BestStars first15={first15} />
-        <BestStars first15={first15} />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
+        <BestStars first15={first15} title="javascript" />
       </div>
       <h1>footer</h1>
     </main>

@@ -1,10 +1,14 @@
 import styles from "./styles.module.css";
-const BestStars = ({ first15 }: any) => {
+const BestStars = ({ first15, title }: any) => {
   return (
     <div className={styles.container}>
-      {first15.map((stars: any, index: any) => {
-        return <div key={index}>{stars.name}</div>;
-      })}
+      <p className={styles.containerp}>{title}</p>
+
+      <div className={styles.starscontainer}>
+        {first15.map((stars: any, index: any) => (
+          <p key={index}>{stars.name}</p>
+        ))}
+      </div>
     </div>
   );
 };

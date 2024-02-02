@@ -1,3 +1,20 @@
-.container {
+.starscontainer {
+  width: auto;
+  border: 12px solid var(--violet-8);
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 0.5rem 1rem;
+  color: var(--violet-12);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--violet-5);
+}
+.containerp {
+  text-align: center;
+  margin-bottom: 8px;
+  border-top: 5px solid var(--lime-5);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 24px;
 }
