@@ -4,6 +4,8 @@ import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
 import BestStartImage from "@/components/BestStarsImage/BestStartImage";
 import { getData, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
+import NavigationMenuDemo from "@/components/Navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const croissant = Croissant_One({
   subsets: ["latin-ext"],
@@ -49,10 +51,10 @@ export default async function Home() {
 
   let totalimages = images.concat(imagests, imagespy, imagescss, imagesgo, imagesc, imagesphp, imagesjava);
   let bg = ["#FF204756", "#836A21", "#6F2539", "#25482D", "#562800", "#577538", "#56468B", "#181917"];
-  let bg2 = ["#FF204756", "#836A21", "#6F2539", "#25482D", "#562800", "#577538", "#56468B", "#181917"];
 
   return (
     <main className={styles.main}>
+      <NavigationMenuDemo />
       <section className={styles.sectionContainer}>
         <section className={styles.headerContainer}>
           <section className={styles.kingimages}>
@@ -73,6 +75,7 @@ export default async function Home() {
           <BestStars first15={first15php} title="Php" bg={bg[7]} bg2={bg[4]} />
         </section>
       </section>
+      <Footer />
     </main>
   );
 }

@@ -24,7 +24,7 @@ const NavigationMenuDemo = () => {
                       <path d="M12 0H4V8H12V0Z"></path>
                       <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
                     </svg>
-                    <div className="CalloutHeading">Radix Primitives</div>
+                    <div className="CalloutHeading">I can use Radix Primitives</div>
                     <p className="CalloutText">Unstyled, accessible components for React.</p>
                   </a>
                 </NavigationMenu.Link>
@@ -55,24 +55,12 @@ const NavigationMenuDemo = () => {
               <ListItem title="Getting started" href="/">
                 A quick tutorial to get you up and running with Radix Primitives.
               </ListItem>
-              <ListItem title="Styling" href="/">
-                Unstyled and compatible with any styling solution.
-              </ListItem>
-              <ListItem title="Animation" href="/">
-                Use CSS keyframes or any animation library of your choice.
-              </ListItem>
-              <ListItem title="Accessibility" href="/primitives/docs/overview/accessibility">
-                Tested in a range of browsers and assistive technologies.
-              </ListItem>
-              <ListItem title="Releases" href="/primitives/docs/overview/releases">
-                Radix Primitives releases and their changelogs.
-              </ListItem>
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+          <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/oldbeedev">
             Github
           </NavigationMenu.Link>
         </NavigationMenu.Item>
