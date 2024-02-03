@@ -44,7 +44,7 @@
 }
 
 .starscontainer::-moz-scrollbar-thumb {
-  background-color: var(--lime-5);
+  background-color: var(--lime-11);
   border-radius: 5px;
 }
 .stars {
@@ -71,5 +71,5 @@
   display: grid;
   align-items: center;
   padding-left: 0.5rem;
-  grid-template-columns: 0.2fr 0.3fr 0.3fr auto;
+  grid-template-columns: 0.2fr 0.3fr 0.38fr auto;
 }

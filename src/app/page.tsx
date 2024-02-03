@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
 import BestStartImage from "@/components/BestStarsImage/BestStartImage";
-import { getData } from "@/services/getData";
+import { getData, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
 
 const croissant = Croissant_One({
   subsets: ["latin-ext"],
@@ -18,25 +18,61 @@ export const metadata: Metadata = {
 export default async function Home() {
   const data = await getData();
   let first15 = data.items.slice(0, 15);
-  let images = data.items.slice(0, 10);
+  let images = data.items.slice(0, 15);
+  const datats = await getDatats();
+  let first15ts = datats.items.slice(0, 15);
+  let imagests = datats.items.slice(0, 15);
+
+  let datapy = await getDatapy();
+  let first15py = datapy.items.slice(0, 15);
+  let imagespy = datapy.items.slice(0, 15);
+
+  let datacss = await getDatacss();
+  let first15css = datacss.items.slice(0, 15);
+  let imagescss = datacss.items.slice(0, 15);
+
+  let datago = await getDatago();
+  let first15go = datago.items.slice(0, 15);
+  let imagesgo = datago.items.slice(0, 15);
+
+  let datac = await getDatac();
+  let firs15c = datac.items.slice(0, 15);
+  let imagesc = datac.items.slice(0, 15);
+
+  let dataphp = await getDatacpp();
+  let first15php = dataphp.items.slice(0, 15);
+  let imagesphp = dataphp.items.slice(0, 15);
+
+  let datajava = await getDatacpp();
+  let first15java = datajava.items.slice(0, 15);
+  let imagesjava = datajava.items.slice(0, 15);
+
+  let totalimages = images.concat(imagests, imagespy, imagescss, imagesgo, imagesc, imagesphp, imagesjava);
+  let bg = ["#FF204756", "#836A21", "#6F2539", "#25482D", "#562800", "#577538", "#56468B", "#181917"];
+  let bg2 = ["#FF204756", "#836A21", "#6F2539", "#25482D", "#562800", "#577538", "#56468B", "#181917"];
 
   return (
     <main className={styles.main}>
-      <section className={styles.headerContainer}>
-        <section className={styles.kingimages}>
-          <BestStartImage first15={images} />
-          <BestStartImage first15={images} />
-          <BestStartImage first15={images} />
-          <BestStartImage first15={images} />
+      <section className={styles.sectionContainer}>
+        <section className={styles.headerContainer}>
+          <section className={styles.kingimages}>
+            <BestStartImage first15={totalimages} />
+          </section>
+
+          <h1 className={`${croissant.className} ${styles.h1}`}>King&apos;s of Github</h1>
         </section>
 
-        <h1 className={`${croissant.className} ${styles.h1}`}>King&apos;s of Github</h1>
+        <section className={styles.bestStarsContainer}>
+          <BestStars first15={firs15c} title="C" bg={bg[0]} bg2={bg[7]} />
+          <BestStars first15={first15} title="Javascript" bg={bg[1]} bg2={bg[6]} />
+          <BestStars first15={first15java} title="Java" bg={bg[2]} bg2={bg[5]} />
+          <BestStars first15={first15ts} title="Typescript" bg={bg[3]} bg2={bg[0]} />
+          <BestStars first15={first15py} title="Python" bg={bg[4]} bg2={bg[1]} />
+          <BestStars first15={first15css} title="Css" bg={bg[5]} bg2={bg[2]} />
+          <BestStars first15={first15go} title="Go" bg={bg[6]} bg2={bg[3]} />
+          <BestStars first15={first15php} title="Php" bg={bg[7]} bg2={bg[4]} />
+        </section>
       </section>
-
-      <section className={styles.bestStarsContainer}>
-        <BestStars first15={first15} title="javascript" />
-      </section>
-      <h1>footer</h1>
     </main>
   );
 }

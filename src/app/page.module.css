@@ -1,25 +1,30 @@
 .main {
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: #010101;
   width: 100%;
+  height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 .headerContainer {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-height: 95vh;
 }
-
+.sectionContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .h1 {
   background-color: rgba(137, 43, 226, 0.308);
   backdrop-filter: blur(15px);
@@ -28,25 +33,26 @@
   font-size: 48px;
   z-index: 2;
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 35%;
+  border: 1px solid rgba(255, 0, 0, 0.438);
 }
+
 @media (max-width: 720px) {
   .h1 {
-    font-size: 24px;
+    font-size: 32px;
     z-index: 2;
+    top: 250px;
+    right: 20%;
     position: absolute;
-    top: 40%;
-    right: 30px;
   }
 }
 @media (max-width: 420px) {
   .h1 {
-    font-size: 20px;
+    font-size: 24px;
     z-index: 2;
+    right: 15%;
     position: absolute;
-    top: 30%;
-    right: 10%;
   }
 }
 
@@ -62,13 +68,14 @@
 .main h2 {
   color: red;
 }
-.main h1:nth-child(3) {
-  width: 100%;
-  height: 60px;
-  background-color: var(--violet-11);
 
-  bottom: 0;
-}
 .bestStarsContainer {
   min-height: 100vh;
+}
+.kingimages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 }

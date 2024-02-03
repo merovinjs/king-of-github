@@ -5,9 +5,9 @@ const croissant = Croissant_One({
   subsets: ["latin-ext"],
   weight: "400",
 });
-const BestStars = ({ first15, title }: any) => {
+const BestStars = ({ first15, title, bg, bg2 }: any) => {
   return (
-    <div className={styles.container}>
+    <div style={{ backgroundColor: bg2 }} className={styles.container}>
       <p className={`${croissant.className} ${styles.containerp}`}>{title}</p>
       <li className={styles.li}>
         <ul>ProjectName</ul>
@@ -17,16 +17,18 @@ const BestStars = ({ first15, title }: any) => {
         </ul>
         <ul>Description</ul>
       </li>
-      <div className={styles.starscontainer}>
+      <div style={{ backgroundColor: bg }} className={styles.starscontainer}>
         {first15.map((stars: any, index: any) => (
           <div className={styles.stars} key={index}>
             <p className={styles.starsName}>{stars.name}</p>
-            <Image className={styles.image} src={stars.owner.avatar_url} alt="stars" width={75} height={75} />
+            <div>
+              <Image className={styles.image} src={stars.owner.avatar_url} alt="stars" width={75} height={75} />
+            </div>
             <p>
               {stars.stargazers_count}
               <span className={styles.spanstar}>★</span>
             </p>
-            <p>{stars.description}</p>
+            <p>{stars.description.length > 50 ? stars.description.slice(0, 55) + "..." : stars.description}</p>
           </div>
         ))}
       </div>

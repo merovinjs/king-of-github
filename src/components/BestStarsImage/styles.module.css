@@ -1,0 +1,12 @@
+.imagecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  justify-content: center;
+}
+.image:hover {
+  z-index: 9;
+  transform: scale(1.25);
+}
