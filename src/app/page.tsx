@@ -2,7 +2,6 @@ import BestStars from "@/components/Beststars/BestStars";
 import styles from "./page.module.css";
 import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
-import Image from "next/image";
 import BestStartImage from "@/components/BestStarsImage/BestStartImage";
 import { getData } from "@/services/getData";
 
