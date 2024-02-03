@@ -21,11 +21,15 @@
 }
 
 .h1 {
+  background-color: rgba(137, 43, 226, 0.308);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
   font-size: 48px;
   z-index: 2;
   position: absolute;
-  top: 40%;
-  right: 15%;
+  top: 50%;
+  right: 35%;
 }
 @media (max-width: 720px) {
   .h1 {
@@ -45,14 +49,7 @@
     right: 10%;
   }
 }
-.image {
-  max-height: 85vh;
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  aspect-ratio: 16/11;
-  margin: 1rem auto;
-}
+
 .bestStarsContainer {
   display: flex;
   justify-content: center;
