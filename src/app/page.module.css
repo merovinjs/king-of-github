@@ -72,3 +72,6 @@
 
   bottom: 0;
 }
+.bestStarsContainer {
+  min-height: 100vh;
+}

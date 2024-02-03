@@ -1,20 +1,75 @@
-.starscontainer {
-  width: auto;
-  border: 12px solid var(--violet-8);
-  border-top-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  padding: 0.5rem 1rem;
-  color: var(--violet-12);
-  max-width: 500px;
+.container {
+  background-color: var(--lime-11);
+  border-radius: 8px;
+}
+.image {
+  border-radius: 8px;
+}
+.starsName {
+  font-size: 20px;
+}
+.stars {
   display: flex;
-  flex-direction: column;
-  background-color: var(--violet-5);
+  align-items: center;
 }
 .containerp {
+  font-size: 48px;
   text-align: center;
-  margin-bottom: 8px;
-  border-top: 5px solid var(--lime-5);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  font-size: 24px;
+}
+.starscontainer {
+  display: flex;
+  max-width: 600px;
+  flex-direction: column;
+  background-color: var(--lime-12);
+  padding: 0.5rem 1rem;
+  height: 500px;
+  overflow: auto;
+}
+.starscontainer::-webkit-scrollbar {
+  width: 30px;
+  height: 10px;
+  background-color: var(--violet-12);
+  border-radius: 5px;
+}
+
+.starscontainer::-webkit-scrollbar-thumb {
+  background-color: var(--lime-5);
+  border-radius: 5px;
+}
+.starscontainer::-moz-scrollbar {
+  width: 30px;
+  height: 10px;
+  background-color: var(--violet-12);
+  border-radius: 5px;
+}
+
+.starscontainer::-moz-scrollbar-thumb {
+  background-color: var(--lime-5);
+  border-radius: 5px;
+}
+.stars {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  gap: 3px;
+  margin-bottom: 10px;
+}
+.ulstars {
+  display: flex;
+  align-items: center;
+}
+.spanstarheader {
+  font-size: 28px;
+  color: yellow;
+  margin-bottom: 10px;
+}
+.spanstar {
+  color: yellow;
+}
+.li {
+  font-size: 18px;
+  list-style: none;
+  display: grid;
+  align-items: center;
+  padding-left: 0.5rem;
+  grid-template-columns: 0.2fr 0.3fr 0.3fr auto;
 }
