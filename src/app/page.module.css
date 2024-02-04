@@ -33,30 +33,28 @@
   font-size: 48px;
   z-index: 2;
   position: absolute;
-  top: 40%;
-  right: 35%;
+  left: 50%;
+  transform: translateX(-50%);
   border: 1px solid rgba(255, 0, 0, 0.438);
 }
 
 @media (max-width: 720px) {
   .h1 {
+    top: 150px;
     font-size: 32px;
     z-index: 2;
-    top: 250px;
-    right: 27%;
-    position: absolute;
+    transform: translateX(-50%);
   }
 }
 @media (max-width: 420px) {
   .h1 {
     font-size: 24px;
     z-index: 2;
-    right: 15%;
-    position: absolute;
   }
 }
 
 .bestStarsContainer {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

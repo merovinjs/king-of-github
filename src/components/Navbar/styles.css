@@ -22,7 +22,7 @@ p {
   align-items: center;
   justify-content: space-around;
   height: 45px;
-  background-color: var(--lime-12);
+
   padding: 4px;
   border-radius: 6px;
   list-style: none;
@@ -67,16 +67,11 @@ p {
   line-height: 1;
 }
 
-.Navfirst {
-  left: 0;
-}
-.NavSecond {
-  left: 32%;
-}
 .NavigationMenuContent {
   position: absolute;
   top: 50px;
   width: 100%;
+  left: 0;
 
   animation-duration: 250ms;
   animation-timing-function: ease;
@@ -96,6 +91,13 @@ p {
 @media only screen and (min-width: 600px) {
   .NavigationMenuContent {
     width: auto;
+  }
+  .Navfirst {
+    left: 0;
+  }
+
+  .Navsecond {
+    left: 33%;
   }
 }
 
@@ -141,8 +143,9 @@ p {
 }
 
 .List {
+  background-color: var(--lime-2);
   display: grid;
-  padding: 22px;
+  padding: 2px;
   margin: 0;
   column-gap: 10px;
   list-style: none;
@@ -155,10 +158,10 @@ p {
   }
   .List.two {
     background-color: var(--lime-2);
-    width: 600px;
+    width: 400px;
     height: auto;
     grid-auto-flow: column;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 
@@ -251,8 +254,8 @@ p {
   position: relative;
   top: 10%;
   background-color: rgb(136, 255, 0);
-  width: 50px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   transform: rotate(45deg);
   border-top-left-radius: 2px;
 }

@@ -30,10 +30,10 @@ const NavigationMenuDemo = () => {
                 </NavigationMenu.Link>
               </li>
 
-              <ListItem href="https://stitches.dev/" title="Stitches">
+              <ListItem href="/" title="Stitches">
                 CSS-in-JS with best-in-class developer experience.
               </ListItem>
-              <ListItem href="/colors" title="Colors">
+              <ListItem href="/" title="Colors">
                 Beautiful, thought-out palettes with auto dark mode.
               </ListItem>
               <ListItem href="https://icons.radix-ui.com/" title="Icons">
@@ -47,7 +47,7 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
             Overview <CaretDownIcon className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="NavigationMenuContent NavSecond">
+          <NavigationMenu.Content className="NavigationMenuContent Navsecond ">
             <ul className="List two">
               <ListItem title="Introduction" href="/">
                 Build high-quality, accessible design systems and web apps.

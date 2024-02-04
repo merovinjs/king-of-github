@@ -1,6 +1,7 @@
 .container {
-  background-color: var(--lime-11);
   border-radius: 8px;
+  max-width: 400px;
+  width: auto;
 }
 .image {
   border-radius: 8px;
@@ -18,15 +19,15 @@
 }
 .starscontainer {
   display: flex;
-  max-width: 600px;
   flex-direction: column;
   background-color: var(--lime-12);
   padding: 0.5rem 1rem;
-  height: 500px;
-  overflow: auto;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .starscontainer::-webkit-scrollbar {
-  width: 30px;
+  width: 20px;
   height: 10px;
   background-color: var(--violet-12);
   border-radius: 5px;
@@ -37,7 +38,7 @@
   border-radius: 5px;
 }
 .starscontainer::-moz-scrollbar {
-  width: 30px;
+  width: 20px;
   height: 10px;
   background-color: var(--violet-12);
   border-radius: 5px;
@@ -71,5 +72,5 @@
   display: grid;
   align-items: center;
   padding-left: 0.5rem;
-  grid-template-columns: 0.2fr 0.3fr 0.38fr auto;
+  grid-template-columns: 0.2fr 0.3fr 0.4fr auto;
 }
