@@ -74,3 +74,7 @@
   padding-left: 0.5rem;
   grid-template-columns: 0.2fr 0.3fr 0.4fr auto;
 }
+.starslink {
+  color: #fff;
+  text-decoration: none;
+}
