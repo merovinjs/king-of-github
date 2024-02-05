@@ -7,6 +7,7 @@ export async function getData() {
   const jsstars = await fetch("https://api.github.com/search/repositories?q=language:javascript&sort=stars=desc", options);
   return jsstars.json();
 }
+
 export async function getDatats() {
   const options = {
     headers: {
