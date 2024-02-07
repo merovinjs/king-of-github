@@ -66,6 +66,7 @@ export default async function Home() {
         </section>
 
         <SearchLang />
+
         <section className={styles.bestStarsContainer}>
           <BestStars first15={firs15c} title="C" bg={bg[0]} bg2={bg[7]} />
           <BestStars first15={first15} title="Javascript" bg={bg[1]} bg2={bg[6]} />

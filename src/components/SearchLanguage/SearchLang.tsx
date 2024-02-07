@@ -1,5 +1,8 @@
 "use client";
-
+interface Option {
+  label: string;
+  value: string;
+}
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import styles from "./styles.module.css";
@@ -21,12 +24,24 @@ const SearchLang = () => {
     }
   };
 
+  const options: Option[] = [
+    { label: "Ada", value: "ada" },
+    { label: "Assembly language", value: "assembly" },
+    { label: "kotlin", value: "kotlin" },
+  ];
   return (
     <div>
-      <input value={keyword} onKeyDown={searchFunc} onChange={(e) => setKeyword(e.target.value)} type="text" id="text" placeholder="language   ! ! !" />
+      <select value={keyword} onKeyDown={searchFunc} onChange={(e) => setKeyword(e.target.value)} id="text">
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
       <button className={styles.button} onChange={(e: any) => setKeyword(e.target.value)} onClick={searchFuncIcon}>
         Search
       </button>
+      <p>Seçilen Değer: {keyword}</p>
     </div>
   );
 };
