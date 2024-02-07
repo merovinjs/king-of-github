@@ -3,9 +3,10 @@ import styles from "./page.module.css";
 import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
 import BestStartImage from "@/components/BestStarsImage/BestStartImage";
-import { getData, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
+import { getData, getDataSearch, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
 import NavigationMenuDemo from "@/components/Navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import SearchLang from "@/components/SearchLanguage/SearchLang";
 
 const croissant = Croissant_One({
   subsets: ["latin-ext"],
@@ -64,6 +65,7 @@ export default async function Home() {
           <h1 className={`${croissant.className} ${styles.h1}`}>King&apos;s of Github</h1>
         </section>
 
+        <SearchLang />
         <section className={styles.bestStarsContainer}>
           <BestStars first15={firs15c} title="C" bg={bg[0]} bg2={bg[7]} />
           <BestStars first15={first15} title="Javascript" bg={bg[1]} bg2={bg[6]} />

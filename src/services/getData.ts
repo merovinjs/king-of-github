@@ -73,3 +73,12 @@ export async function getDatajava() {
   const jsstars = await fetch(`https://api.github.com/search/repositories?q=language:${lang}&sort=stars=desc`, options);
   return jsstars.json();
 }
+export async function getDataSearch(query: string) {
+  const options = {
+    headers: {
+      Authorization: `token ${process.env.GITHUB_KEY}`,
+    },
+  };
+  const jsstars = await fetch(`https://api.github.com/search/repositories?q=language:${query}&sort=stars=desc`, options);
+  return jsstars.json();
+}
