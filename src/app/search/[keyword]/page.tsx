@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import styles from "./styles.module.css";
+
 const Page = async ({ params }: any) => {
   const keyword = params.keyword;
   const options = {
@@ -14,10 +16,14 @@ const Page = async ({ params }: any) => {
   return (
     <div>
       <h2>Arama Sonuçlarınız...</h2>
-      <div>
+      <div className={styles.baseContainer}>
         {items.map((lang: any) => (
-          <div key={lang.id}>
-            <Image width={175} height={250} unoptimized alt={lang.name} src={lang.owner.avatar_url} />
+          <div className={styles.container} key={lang.id}>
+            <div className={styles.starsContainer}>
+              <Image width={175} height={200} unoptimized alt={lang.name} src={lang.owner.avatar_url} />
+              <p>{lang.description.length > 200 ? lang.description.slice(0, 200) + "..." : lang.description}</p>
+              <p>{lang.topics[0]}</p>
+            </div>
           </div>
         ))}
       </div>

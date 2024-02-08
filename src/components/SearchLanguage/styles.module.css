@@ -1,4 +1,20 @@
+.container {
+  display: flex;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: 8px;
+  margin-top: 1rem;
+  border-bottom-left-radius: 8px;
+  background-color: var(--violet-12);
+  color: var(--violet-1);
+  gap: 8px;
+}
 .button {
-  background-color: azure;
-  color: red;
+  color: var(--violet-1);
+  background-color: transparent;
+}
+.selectContainer {
+  color: var(--violet-1);
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
 }

@@ -30,19 +30,21 @@ const SearchLang = () => {
     { label: "kotlin", value: "kotlin" },
   ];
   return (
-    <div>
-      <select value={keyword} onKeyDown={searchFunc} onChange={(e) => setKeyword(e.target.value)} id="text">
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-      <button className={styles.button} onChange={(e: any) => setKeyword(e.target.value)} onClick={searchFuncIcon}>
-        Search
-      </button>
-      <p>Seçilen Değer: {keyword}</p>
-    </div>
+    <>
+      <div className={styles.container}>
+        <select className={styles.selectContainer} value={keyword} onKeyDown={searchFunc} onChange={(e) => setKeyword(e.target.value)} id="text">
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <button className={styles.button} onChange={(e: any) => setKeyword(e.target.value)} onClick={searchFuncIcon}>
+          Search
+        </button>
+      </div>
+      <p>{keyword}</p>
+    </>
   );
 };
 

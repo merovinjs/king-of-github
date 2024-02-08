@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
 import BestStartImage from "@/components/BestStarsImage/BestStartImage";
-import { getData, getDataSearch, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
+import { getData, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
 import NavigationMenuDemo from "@/components/Navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import SearchLang from "@/components/SearchLanguage/SearchLang";
