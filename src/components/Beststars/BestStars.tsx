@@ -19,21 +19,22 @@ const BestStars = ({ first15, title, bg, bg2 }: any) => {
         <ul>Description</ul>
       </li>
       <div style={{ backgroundColor: bg }} className={styles.starscontainer}>
-        {first15.map((stars: any, index: any) => (
-          <div className={styles.stars} key={index}>
-            <Link href={stars.owner.html_url} className={styles.starslink} target="_blank">
-              <p className={styles.starsName}>{stars.name}</p>
-            </Link>
-            <div>
-              <Image className={styles.image} src={stars.owner.avatar_url} alt="stars" width={75} height={75} />
+        {first15 &&
+          first15.map((stars: any, index: any) => (
+            <div className={styles.stars} key={index}>
+              <Link href={stars.owner.html_url} className={styles.starslink} target="_blank">
+                <p className={styles.starsName}>{stars.name}</p>
+              </Link>
+              <div>
+                <Image className={styles.image} src={stars.owner.avatar_url} alt="stars" width={75} height={75} />
+              </div>
+              <p>
+                {stars.stargazers_count}
+                <span className={styles.spanstar}>★</span>
+              </p>
+              <p>{stars.description.length > 50 ? stars.description.slice(0, 55) + "..." : stars.description}</p>
             </div>
-            <p>
-              {stars.stargazers_count}
-              <span className={styles.spanstar}>★</span>
-            </p>
-            <p>{stars.description.length > 50 ? stars.description.slice(0, 55) + "..." : stars.description}</p>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
