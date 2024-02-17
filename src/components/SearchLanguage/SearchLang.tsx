@@ -11,14 +11,14 @@ const SearchLang = () => {
   const [keyword, setKeyword] = useState("");
   const router = useRouter();
   const searchFunc = (e: any) => {
-    if (e.key === "Enter" && keyword.length > 2) {
+    if (e.key === "Enter" && keyword?.length > 2) {
       router.push(`/search/${keyword}`);
       setKeyword("");
     }
   };
 
   const searchFuncIcon = () => {
-    if (keyword.length > 2) {
+    if (keyword?.length > 2) {
       router.push(`/search/${keyword}`);
       setKeyword("");
     }
