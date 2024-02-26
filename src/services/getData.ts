@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const options = {
   headers: {
@@ -8,15 +9,6 @@ const options = {
 export async function getData() {
   const jsstars = await fetch("https://api.github.com/search/repositories?q=language:javascript&sort=stars=desc", options);
   return jsstars.json();
-}
-export async function usePosts() {
-  return useQuery({
-    queryKey: ["posts"],
-    queryFn: async () => {
-      const response = await fetch("https://api.github.com/search/repositories?q=language:javascript&sort=stars=desc", options);
-      return response.json();
-    },
-  });
 }
 
 export async function getDatats() {
@@ -62,4 +54,16 @@ export async function getDatajava() {
 export async function getDataSearch(query: string) {
   const jsstars = await fetch(`https://api.github.com/search/repositories?q=language:${query}&sort=stars=desc`, options);
   return jsstars.json();
+}
+export function usePosts() {
+  return useQuery<any>({
+    queryKey: ["posts"],
+    queryFn: async () => {
+      await axios.get("https://api.github.com/search/repositories?q=language:javascript&sort=stars=desc", {
+        headers: {
+          Authorization: `${process.env.GITHUB_KEY}`,
+        },
+      });
+    },
+  });
 }

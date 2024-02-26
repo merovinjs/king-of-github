@@ -1,19 +1,10 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-function usePosts() {
-  return useQuery({
-    queryKey: ["posts"],
-    queryFn: async () => {
-      const { data } = await axios.get("https://jsonplaceholder.typicode.com/posts");
-      return data;
-    },
-  });
-}
 
-const Deneme = () => {
-  const { data } = usePosts();
+import DataGet from "@/services/getdataClient";
+
+export default function Deneme() {
+  const { data, isLoading, isError, error } = DataGet();
+
   return <div>{JSON.stringify(data)}</div>;
-};
-
-export default Deneme;
+}
+//"https://jsonplaceholder.typicode.com/todos/1"

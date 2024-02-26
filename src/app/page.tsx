@@ -29,8 +29,8 @@ export default async function Home() {
   let dataphp = getDatacpp();
 
   const allData = await Promise.all([datac, datajs, datajava, datats, datapy, datacss, datago, dataphp]);
-  const ilk15Veriler = allData.map((data) => data.items.slice(0, 15));
-  const sonimages = ilk15Veriler.flat();
+  const first15Data = allData.map((data) => data.items.slice(0, 15));
+  const firs15DataForimages = first15Data.flat();
 
   let bg = ["#FF204756", "#836A21", "#6F2539", "#25482D", "#562800", "#577538", "#56468B", "#181917"];
   let title = ["C", "javascript", "Java", "Typescript", "Python", "Css", "Go", "Php"];
@@ -44,7 +44,7 @@ export default async function Home() {
       <section className={styles.sectionContainer}>
         <section className={styles.headerContainer}>
           <section className={styles.kingimages}>
-            <BestStartImage first15={sonimages} />
+            <BestStartImage first15={firs15DataForimages} />
           </section>
 
           <h1 className={`${croissant.className} ${styles.h1}`}>King&apos;s of Github</h1>
@@ -53,7 +53,7 @@ export default async function Home() {
         <SearchLang />
 
         <section className={styles.bestStarsContainer}>
-          {ilk15Veriler.map((data, index) => (
+          {first15Data.map((data, index) => (
             <BestStars key={index} first15={data} title={titles[index]} bg={bgmap[index]} bg2={reversedBgmap[index]} />
           ))}
         </section>
