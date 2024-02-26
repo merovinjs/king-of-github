@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { Croissant_One } from "next/font/google";
 import { Metadata } from "next";
 import BestStartImage from "@/components/BestStarsImage/BestStartImage";
-import { getData, getDatac, getDatacpp, getDatacss, getDatago, getDatapy, getDatats } from "@/services/getData";
+import { getData, getDatac, getDatacpp, getDatacss, getDatago, getDatahtml, getDatapy, getDatats } from "@/services/getData";
 import NavigationMenuDemo from "@/components/Navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import SearchLang from "@/components/SearchLanguage/SearchLang";
@@ -27,13 +27,14 @@ export default async function Home() {
   let datacss = getDatacss();
   let datago = getDatago();
   let dataphp = getDatacpp();
+  let datahtml = getDatahtml();
 
-  const allData = await Promise.all([datac, datajs, datajava, datats, datapy, datacss, datago, dataphp]);
+  const allData = await Promise.all([datahtml, datac, datajs, datajava, datats, datapy, datacss, datago, dataphp]);
   const first15Data = allData.map((data) => data.items.slice(0, 15));
   const firs15DataForimages = first15Data.flat();
 
   let bg = ["#FF204756", "#836A21", "#6F2539", "#25482D", "#562800", "#577538", "#56468B", "#181917"];
-  let title = ["C", "javascript", "Java", "Typescript", "Python", "Css", "Go", "Php"];
+  let title = ["html", "C", "javascript", "Java", "Typescript", "Python", "Css", "Go", "Php"];
 
   const bgmap = bg.map((item, index) => item);
   const titles = title.map((item, index) => item);
